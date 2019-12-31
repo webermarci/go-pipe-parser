@@ -3,6 +3,11 @@
 All it does is just parser command strings to feed into `go-pipe`
 https://github.com/b4b4r07/go-pipe
 
+### Install
+```
+go get github.com/webermarci/go-pipe-parser
+```
+
 ### Example
 ```go
 package main
