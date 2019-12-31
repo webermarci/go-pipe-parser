@@ -41,10 +41,31 @@ func TestBuild(t *testing.T) {
 	}
 
 	for _, data := range testingData {
-		results := BuildCommands(data.input)
+		results := buildCommands(data.input)
 
 		if len(results) != data.expectedLen {
 			t.Errorf("Unmached number of commands: input: %s, expected: %d, result: %d", data.input, data.expectedLen, len(results))
+		}
+	}
+}
+
+func TestRun(t *testing.T) {
+	testingData := []struct {
+		input     string
+		hasErrors bool
+	}{
+		{"notarealcommand", true},
+	}
+
+	for _, data := range testingData {
+		result, err := Run(data.input)
+
+		if data.hasErrors && err == nil {
+			t.Errorf("An error was expected: input: %s, result: %d", data.input, result)
+		}
+
+		if !data.hasErrors && err != nil {
+			t.Errorf("An error occured: input: %s, result: %d, err: %s", data.input, result, err)
 		}
 	}
 }
