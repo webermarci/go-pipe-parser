@@ -1,5 +1,8 @@
 # go-pipe-parser
 
+[![GoDoc](https://godoc.org/github.com/webermarci/go-pipe-parser?status.svg)](https://godoc.org/github.com/webermarci/go-pipe-parser)
+[![Go Report Card](https://goreportcard.com/badge/github.com/webermarci/go-pipe-parser)](https://goreportcard.com/report/github.com/webermarci/go-pipe-parser)
+
 All it does is just parser command strings to feed into `go-pipe`
 https://github.com/b4b4r07/go-pipe
 
