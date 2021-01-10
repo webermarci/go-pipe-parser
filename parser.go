@@ -85,11 +85,13 @@ func parse(input string) []string {
 func buildCommands(input string) []*exec.Cmd {
 	commands := []*exec.Cmd{}
 	commandStrings := strings.Split(input, " | ")
+
 	for _, s := range commandStrings {
 		parsed := parse(s)
 		command := exec.Command(parsed[0], parsed[1:]...)
 		commands = append(commands, command)
 	}
+
 	return commands
 }
 
