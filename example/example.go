@@ -2,7 +2,8 @@ package main
 
 import (
 	"log"
-	pipeparser "webermarci/go-pipe-parser"
+
+	pipeparser "github.com/webermarci/go-pipe-parser"
 )
 
 func main() {
