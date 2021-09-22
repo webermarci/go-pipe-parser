@@ -55,6 +55,7 @@ func TestRun(t *testing.T) {
 		hasErrors bool
 	}{
 		{"notarealcommand", true},
+		{"ls", false},
 	}
 
 	for _, data := range testingData {
